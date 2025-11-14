@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes ship-1 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(50vw) translateY(-20px);
+    }
+    100% {
+      transform: translateX(100vw) translateY(0);
+    }
+  }
+
+  @keyframes ship-2 {
+    0% {
+      transform: translateX(0) translateY(0) scaleX(-1);
+    }
+    50% {
+      transform: translateX(-50vw) translateY(20px) scaleX(-1);
+    }
+    100% {
+      transform: translateX(-100vw) translateY(0) scaleX(-1);
+    }
+  }
+
+  @keyframes ship-3 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(120vw) translateY(-30px);
+    }
+  }
+
+  .animate-ship-1 {
+    animation: ship-1 45s linear infinite;
+  }
+
+  .animate-ship-2 {
+    animation: ship-2 50s linear infinite;
+  }
+
+  .animate-ship-3 {
+    animation: ship-3 35s linear infinite;
+  }
+}
